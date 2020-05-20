@@ -1,0 +1,43 @@
+// index styles start
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+// header styles
+.indexHeader {
+    background-image: url(../assets/header-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    // max-width: 1200px;
+}
+.indexHeader .wrapper {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.indexHeader .image {
+    width: 40%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.hamburgerMenu {
+    display: none;
+}
+.subMenu {
+    display: flex;
+    flex-direction: row;;
+}
+
+
+h1 {
+    @include fontSize(138px);
+    text-align:center;
+    margin-bottom:50px;
+    z-index: 20;
+}

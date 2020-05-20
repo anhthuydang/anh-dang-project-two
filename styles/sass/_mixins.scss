@@ -1,0 +1,7 @@
+// mixins
+@mixin fontSize($sizeValue) {
+    font-size: $sizeValue;
+    color: #2C2C2C;
+    letter-spacing: 1px;
+    font-family: 'Playfair Display', serif;
+}
