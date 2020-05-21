@@ -254,7 +254,7 @@ a {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
 }
@@ -263,11 +263,13 @@ a {
   background-image: url(../assets/header-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
+  margin: 0 auto;
+  height: 80vh;
+  max-width: 1300px;
 }
 
 .indexHeader .wrapper {
-  height: 90vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,14 +282,33 @@ a {
           justify-content: space-between;
 }
 
+.indexHeader img {
+  width: 40%;
+  float: right;
+  border: 30px solid #FDFA69;
+  border-right: transparent;
+  position: relative;
+  bottom: -45%;
+  z-index: 10;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 5%;
+}
+
+.menu {
+  width: 40%;
+  height: 60px;
+}
+
+.menu > li {
+  height: 100%;
 }
 
 .hamburgerMenu {
@@ -295,13 +316,41 @@ nav {
 }
 
 .subMenu {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subMenu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(100% / 4);
+          flex: 1 0 calc(100% / 4);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav a {
+  font-size: 20px;
+  color: #2C2C2C;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  line-height: 29px;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
+}
+
+nav a:hover, nav a:focus {
+  border-bottom-color: #4CEEA7;
 }
 
 h1 {
@@ -309,7 +358,111 @@ h1 {
   color: #2C2C2C;
   letter-spacing: 1px;
   font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
   text-align: center;
   margin-bottom: 50px;
+  position: relative;
+  bottom: 50px;
   z-index: 20;
+}
+
+section .wrapper {
+  background-color: #EFFDF3;
+}
+
+.firstSection .wrapper {
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.firstSection .container {
+  text-align: center;
+  width: 70%;
+  margin: 12% auto;
+}
+
+h2 {
+  font-size: 42px;
+  color: #2C2C2C;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: #2C2C2C;
+  margin: 20px auto;
+}
+
+button {
+  font-size: 20px;
+  color: #2C2C2C;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  line-height: 32px;
+  background-color: #4CEEA7;
+  border-style: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.secondSection .wrapper {
+  background-color: #FAFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.secondSection .flexLeft,
+.secondSection .flexRight {
+  width: 40%;
+}
+
+.secondSection .containerLeft {
+  margin-top: 70px;
+  text-align: right;
+}
+
+.secondSection .containerRight {
+  margin-bottom: 70px;
+}
+
+h3 {
+  font-size: 32px;
+  color: #2C2C2C;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+}
+
+.secondSection .flexLeft div:first-child {
+  -webkit-box-shadow: 30px 25px #FDFA69;
+          box-shadow: 30px 25px #FDFA69;
+}
+
+.secondSection .flexRight div:first-child {
+  -webkit-box-shadow: -30px 25px #FDFA69;
+          box-shadow: -30px 25px #FDFA69;
+}
+
+.secondSection .flexRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }

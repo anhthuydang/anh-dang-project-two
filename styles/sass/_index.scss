@@ -1,43 +1,152 @@
-// index styles start
+// colour variables
+$primary: #EFFDF3;
+$secondary: #FAFAFA;
+$buttonBackground: #4CEEA7;
+$imageBorder: #FDFA69;
+$textColor: #2C2C2C;
+
+
+
+// INDEX styles start
 .wrapper {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
 }
-// header styles
+    // header styles
 .indexHeader {
     background-image: url(../assets/header-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0 auto;
     height: 80vh;
-    // max-width: 1200px;
+    max-width: 1300px;
 }
 .indexHeader .wrapper {
-    height: 80vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.indexHeader .image {
-    width: 40%;
-}
 
+.indexHeader img {
+    width: 40%;
+    float: right;
+    border: 30px solid $imageBorder;
+    border-right: transparent;
+    position: relative;
+    bottom: -45%;
+    z-index: 10;
+}
+    // nav styles
 nav {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin:0 5%;
+}
+.menu {
+    width: 40%;
+    height: 60px;
+}
+.menu > li {
+    height: 100%;
 }
 .hamburgerMenu {
     display: none;
 }
 .subMenu {
+    height: 100%;
     display: flex;
-    flex-direction: row;;
+    align-items: center;
 }
-
+.subMenu li {
+    display: flex;
+    flex: 1 0 calc(100% / 4);
+    justify-content: center;
+}
+nav a {
+    @include fontSize(20px);
+    line-height: 29px;
+    border-bottom: 2px solid transparent;
+    transition:200ms ease-in;
+        &:hover,
+        &:focus {
+            border-bottom-color: $buttonBackground;
+        }
+}
 
 h1 {
     @include fontSize(138px);
     text-align:center;
     margin-bottom:50px;
+    position: relative;
+    bottom: 50px;
     z-index: 20;
+}
+
+    // main styles
+// First section styles
+section .wrapper {
+    background-color: $primary;
+}
+.firstSection .wrapper {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+.firstSection .container {
+    text-align: center;
+    width: 70%;
+    margin:12% auto;
+}
+h2 {
+    @include fontSize(42px);
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: $textColor;
+    margin:20px auto;
+}
+button {
+    @include fontSize(20px);
+    line-height: 32px;
+    background-color: $buttonBackground;
+    border-style: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+// Second section styles
+.secondSection .wrapper {
+    background-color: $secondary;
+    display: flex;
+    justify-content: space-between;
+}
+.secondSection .flexLeft,
+.secondSection .flexRight {
+    width: 40%;
+}
+.secondSection .containerLeft {
+    margin-top: 70px;
+    text-align: right;
+}
+.secondSection .containerRight {
+    margin-bottom: 70px;
+}
+h3 {
+    @include fontSize(32px);
+}
+.secondSection .flexLeft div:first-child {
+    box-shadow: 30px 25px $imageBorder;
+}
+.secondSection .flexRight div:first-child {
+    box-shadow: -30px 25px $imageBorder;
+}
+
+
+.secondSection .flexRight {
+    display: flex;
+    flex-direction: column-reverse;
 }
