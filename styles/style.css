@@ -240,7 +240,7 @@ img {
   display: block;
 }
 
-body, h1, h2, p, ul, li, button {
+body, h1, h2, h3, h4, p, ul, li, button {
   margin: 0;
   padding: 0;
 }
@@ -299,7 +299,7 @@ nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: 0 5%;
+  margin: 0 50px;
 }
 
 .menu {
@@ -433,10 +433,12 @@ button {
 .secondSection .containerLeft {
   margin-top: 70px;
   text-align: right;
+  margin-left: 50px;
 }
 
 .secondSection .containerRight {
   margin-bottom: 70px;
+  margin-right: 50px;
 }
 
 h3 {
@@ -465,4 +467,39 @@ h3 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+}
+
+.thirdSection .wrapper {
+  padding: 80px 50px;
+}
+
+.thirdSection .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
+}
+
+.textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.index .icon {
+  background-color: #4CEEA7;
+  height: 53px;
+  width: 53px;
+  border-radius: 50%;
+}
+
+.icon i {
+  font-size: 23px;
+  padding: 15px;
+}
+
+.index .textContainer div:nth-of-type(2) {
+  width: calc(100% - 53px);
+  padding-left: 20px;
+  padding-top: 5px;
 }

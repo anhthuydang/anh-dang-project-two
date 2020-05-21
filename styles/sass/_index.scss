@@ -42,7 +42,7 @@ $textColor: #2C2C2C;
 nav {
     display: flex;
     justify-content: flex-end;
-    margin:0 5%;
+    margin:0 50px;
 }
 .menu {
     width: 40%;
@@ -131,9 +131,11 @@ button {
 .secondSection .containerLeft {
     margin-top: 70px;
     text-align: right;
+    margin-left: 50px;
 }
 .secondSection .containerRight {
     margin-bottom: 70px;
+    margin-right: 50px;
 }
 h3 {
     @include fontSize(32px);
@@ -150,3 +152,41 @@ h3 {
     display: flex;
     flex-direction: column-reverse;
 }
+
+// Third section styles
+.thirdSection .wrapper {
+    padding:80px 50px;
+}
+.thirdSection .container {
+    display: flex;
+    padding-top: 50px;
+}
+.textContainer {
+    display: flex;
+}
+.index .icon {
+    background-color: $buttonBackground;
+    height: 53px;
+    width: 53px;
+    border-radius: 50%;
+}
+.icon i {
+    font-size: 23px;
+    padding: 15px;
+}
+// .fa-camera {
+//     font-size: 25px;
+//     padding: 13px;
+// }
+// .fa-users {
+//     font-size: 25px;
+//     padding: 11px;
+// }
+
+.index .textContainer div:nth-of-type(2) {
+    width: calc(100% - 53px);
+    padding-left:20px;
+    padding-top:5px;
+}
+
+// Banner
