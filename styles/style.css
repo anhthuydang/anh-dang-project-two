@@ -254,8 +254,8 @@ a {
 }
 
 .wrapper {
-  max-width: 1300px;
-  width: 100%;
+  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -263,9 +263,8 @@ a {
   background-image: url(../assets/header-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 auto;
-  height: 80vh;
-  max-width: 1300px;
+  height: 100vh;
+  position: relative;
 }
 
 .indexHeader .wrapper {
@@ -283,12 +282,12 @@ a {
 }
 
 .indexHeader img {
-  width: 40%;
-  float: right;
+  width: 35%;
   border: 30px solid #FDFA69;
   border-right: transparent;
-  position: relative;
-  bottom: -45%;
+  position: absolute;
+  bottom: -20%;
+  right: 0;
   z-index: 10;
 }
 
@@ -354,24 +353,22 @@ nav a:hover, nav a:focus {
 }
 
 h1 {
-  font-size: 138px;
+  font-size: 130px;
   color: #2C2C2C;
   letter-spacing: 1px;
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: relative;
-  bottom: 50px;
   z-index: 20;
 }
 
-section .wrapper {
+section {
   background-color: #EFFDF3;
 }
 
 .firstSection .wrapper {
-  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,10 +377,10 @@ section .wrapper {
           justify-content: center;
 }
 
-.firstSection .container {
+.firstSection .textContainer {
   text-align: center;
   width: 70%;
-  margin: 12% auto;
+  margin: 15% auto;
 }
 
 h2 {
@@ -392,6 +389,8 @@ h2 {
   letter-spacing: 1px;
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
+  z-index: 20;
+  position: relative;
 }
 
 p {
@@ -415,8 +414,11 @@ button {
   border-radius: 2px;
 }
 
-.secondSection .wrapper {
+.secondSection {
   background-color: #FAFAFA;
+}
+
+.secondSection .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,18 +429,18 @@ button {
 
 .secondSection .flexLeft,
 .secondSection .flexRight {
-  width: 40%;
+  width: 45%;
 }
 
 .secondSection .containerLeft {
-  margin-top: 70px;
+  margin: 70px 0 40px 0;
   text-align: right;
-  margin-left: 50px;
+  padding-right: 30px;
 }
 
 .secondSection .containerRight {
-  margin-bottom: 70px;
-  margin-right: 50px;
+  margin: 40px 0 70px 0;
+  padding-left: 30px;
 }
 
 h3 {
@@ -450,13 +452,19 @@ h3 {
 }
 
 .secondSection .flexLeft div:first-child {
-  -webkit-box-shadow: 30px 25px #FDFA69;
-          box-shadow: 30px 25px #FDFA69;
+  -webkit-box-shadow: 30px 30px #FDFA69;
+          box-shadow: 30px 30px #FDFA69;
+  position: relative;
+  left: -5vw;
+  top: -30px;
 }
 
 .secondSection .flexRight div:first-child {
   -webkit-box-shadow: -30px 25px #FDFA69;
           box-shadow: -30px 25px #FDFA69;
+  position: relative;
+  right: -5vw;
+  bottom: -30px;
 }
 
 .secondSection .flexRight {
@@ -470,7 +478,7 @@ h3 {
 }
 
 .thirdSection .wrapper {
-  padding: 80px 50px;
+  padding: 80px 0;
 }
 
 .thirdSection .container {
@@ -480,7 +488,7 @@ h3 {
   padding-top: 50px;
 }
 
-.textContainer {
+.thirdSection .textContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,8 +506,60 @@ h3 {
   padding: 15px;
 }
 
-.index .textContainer div:nth-of-type(2) {
+.thirdSection .textContainer div:nth-of-type(2) {
   width: calc(100% - 53px);
   padding-left: 20px;
   padding-top: 5px;
+}
+
+.fourthSection .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 80px 0;
+}
+
+.fourthSection .imageContainer {
+  width: 25%;
+}
+
+.fourthSection img {
+  -webkit-box-shadow: 30px 25px #FDFA69;
+          box-shadow: 30px 25px #FDFA69;
+}
+
+.fourthSection .textContainer {
+  width: calc(75% - 70px);
+  margin-left: 70px;
+}
+
+.gallery {
+  background: #FAFAFA;
+}
+
+.gallery .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 0;
+}
+
+.gallery .imageContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(100%/3 - 60px);
+          flex: 1 1 calc(100%/3 - 60px);
+}
+
+.gallery .imageContainer:nth-child(2) {
+  margin: 0 30px;
+}
+
+.index footer {
+  text-align: center;
+  background-color: #2C2C2C;
+}
+
+.index footer p {
+  color: #FAFAFA;
+  margin: 0 auto;
 }

@@ -9,8 +9,8 @@ $textColor: #2C2C2C;
 
 // INDEX styles start
 .wrapper {
-    max-width: 1300px;
-    width: 100%;
+    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
 }
     // header styles
@@ -18,9 +18,8 @@ $textColor: #2C2C2C;
     background-image: url(../assets/header-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0 auto;
-    height: 80vh;
-    max-width: 1300px;
+    height: 100vh;
+    position: relative;
 }
 .indexHeader .wrapper {
     height: 100%;
@@ -28,14 +27,13 @@ $textColor: #2C2C2C;
     flex-direction: column;
     justify-content: space-between;
 }
-
 .indexHeader img {
-    width: 40%;
-    float: right;
+    width: 35%;
     border: 30px solid $imageBorder;
     border-right: transparent;
-    position: relative;
-    bottom: -45%;
+    position: absolute;
+    bottom: -20%;
+    right:0;
     z-index: 10;
 }
     // nav styles
@@ -74,33 +72,32 @@ nav a {
             border-bottom-color: $buttonBackground;
         }
 }
-
 h1 {
-    @include fontSize(138px);
+    @include fontSize(130px);
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:20px;
     position: relative;
-    bottom: 50px;
     z-index: 20;
 }
 
     // main styles
 // First section styles
-section .wrapper {
+section {
     background-color: $primary;
 }
 .firstSection .wrapper {
-    height: 60vh;
     display: flex;
     justify-content: center;
 }
-.firstSection .container {
+.firstSection .textContainer {
     text-align: center;
     width: 70%;
-    margin:12% auto;
+    margin:15% auto;
 }
 h2 {
     @include fontSize(42px);
+    z-index: 20;
+    position: relative;
 }
 p {
     font-family: 'Roboto', sans-serif;
@@ -116,35 +113,45 @@ button {
     border-style: none;
     padding: 5px 10px;
     border-radius: 2px;
+        
 }
 
 // Second section styles
-.secondSection .wrapper {
+.secondSection {
     background-color: $secondary;
+
+}
+.secondSection .wrapper {
     display: flex;
     justify-content: space-between;
 }
 .secondSection .flexLeft,
 .secondSection .flexRight {
-    width: 40%;
+    width: 45%;
 }
 .secondSection .containerLeft {
-    margin-top: 70px;
+    margin: 70px 0 40px 0;
     text-align: right;
-    margin-left: 50px;
+    padding-right: 30px;
 }
 .secondSection .containerRight {
-    margin-bottom: 70px;
-    margin-right: 50px;
+    margin: 40px 0 70px 0;
+    padding-left: 30px;
 }
 h3 {
     @include fontSize(32px);
 }
 .secondSection .flexLeft div:first-child {
-    box-shadow: 30px 25px $imageBorder;
+    box-shadow: 30px 30px $imageBorder;
+    position: relative;
+    left: -5vw;
+    top: -30px;
 }
 .secondSection .flexRight div:first-child {
     box-shadow: -30px 25px $imageBorder;
+    position: relative;
+    right: -5vw;
+    bottom: -30px;
 }
 
 
@@ -155,13 +162,13 @@ h3 {
 
 // Third section styles
 .thirdSection .wrapper {
-    padding:80px 50px;
+    padding:80px 0;
 }
 .thirdSection .container {
     display: flex;
     padding-top: 50px;
 }
-.textContainer {
+.thirdSection .textContainer {
     display: flex;
 }
 .index .icon {
@@ -174,19 +181,53 @@ h3 {
     font-size: 23px;
     padding: 15px;
 }
-// .fa-camera {
-//     font-size: 25px;
-//     padding: 13px;
-// }
-// .fa-users {
-//     font-size: 25px;
-//     padding: 11px;
-// }
 
-.index .textContainer div:nth-of-type(2) {
+.thirdSection .textContainer div:nth-of-type(2) {
     width: calc(100% - 53px);
     padding-left:20px;
     padding-top:5px;
 }
 
-// Banner
+// Fourth section styles
+.fourthSection .wrapper {
+    display: flex;
+    padding:80px 0;
+}
+.fourthSection .imageContainer {
+    width: 25%;
+}
+.fourthSection img{
+    box-shadow: 30px 25px $imageBorder;
+}
+.fourthSection .textContainer {
+    width: calc(75% - 70px);
+    margin-left: 70px;
+}
+
+// Last section styles
+.gallery {
+    background: $secondary;
+}
+.gallery .wrapper {
+    display: flex;
+    padding: 60px 0;
+
+}
+.gallery .imageContainer {
+    flex:1 1 calc(100%/3 - 60px)
+    // width: calc(100%/3 - 40px);
+}
+.gallery .imageContainer:nth-child(2) {
+    margin:0 30px;
+}
+
+// Footer style
+.index footer {
+    text-align: center;
+    background-color: $textColor;
+}
+.index footer p {
+    color: $secondary;
+    margin:0 auto;
+}
+
