@@ -1,4 +1,4 @@
-// ---------BLOG styles---------
+// ---------BLOG Page styles---------
 // colour variables
 $primary: #EFFDF3;
 $secondary: #FAFAFA;
@@ -75,13 +75,15 @@ aside {
 }
 
 // Form styles
-.blog form {
+form {
     margin-left:70px;
-        div:first-child {
+        .namePart {
             display: flex;
+            justify-content: space-between;
             margin-bottom:15px;
                 div {
                     flex:1 0 calc(50% - 30px);
+                    margin:15px;
                 }
         }
 }
@@ -97,21 +99,18 @@ textarea {
 input {
     border:none;
     border-bottom: 1px solid $buttonBackground;
-    margin:0 15px;
 }
-.commentPart textarea {
+.textArea {
+    margin:15px;
+}
+textarea {
     border: 1px solid $buttonBackground;
-    margin:0 15px;
     resize:none;
 }
-.commentPart button {
-    margin: 30px 15px;
+.textArea button {
+    margin: 30px 0;
     width: 100%;
 }
-
-
-
-
 
 // Aside styles
 aside .container {
@@ -134,17 +133,17 @@ h4 {
     font-style: italic;
 }
 
-aside ul {
+.blog aside ul {
     margin:20px;
 }
-aside li {
+.blog aside li {
     position: relative;
         p {
             margin:0;
         }
 
 }
-aside li::before {
+.blog aside li::before {
     content:'';
     width: 5px;
     height: 5px;

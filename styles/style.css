@@ -646,21 +646,25 @@ aside {
   margin-top: 0;
 }
 
-.blog form {
+form {
   margin-left: 70px;
 }
 
-.blog form div:first-child {
+form .namePart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 15px;
 }
 
-.blog form div:first-child div {
+form .namePart div {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 calc(50% - 30px);
           flex: 1 0 calc(50% - 30px);
+  margin: 15px;
 }
 
 input,
@@ -675,17 +679,19 @@ textarea {
 input {
   border: none;
   border-bottom: 1px solid #4CEEA7;
-  margin: 0 15px;
 }
 
-.commentPart textarea {
+.textArea {
+  margin: 15px;
+}
+
+textarea {
   border: 1px solid #4CEEA7;
-  margin: 0 15px;
   resize: none;
 }
 
-.commentPart button {
-  margin: 30px 15px;
+.textArea button {
+  margin: 30px 0;
   width: 100%;
 }
 
@@ -715,19 +721,19 @@ h4 {
   font-style: italic;
 }
 
-aside ul {
+.blog aside ul {
   margin: 20px;
 }
 
-aside li {
+.blog aside li {
   position: relative;
 }
 
-aside li p {
+.blog aside li p {
   margin: 0;
 }
 
-aside li::before {
+.blog aside li::before {
   content: '';
   width: 5px;
   height: 5px;
@@ -735,4 +741,54 @@ aside li::before {
   position: absolute;
   left: -20px;
   top: 15px;
+}
+
+.contact header {
+  background-image: url(../assets/contact-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 73vh;
+}
+
+.contact header h1 {
+  font-size: 60px;
+  margin-top: 130px;
+}
+
+.contact main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-bottom: 70px;
+}
+
+.contact section {
+  width: calc(70% - 40px);
+  background-color: #FAFAFA;
+  -webkit-box-shadow: -30px 30px #FDFA69;
+          box-shadow: -30px 30px #FDFA69;
+  position: relative;
+  top: -120px;
+}
+
+.contact aside {
+  width: 30%;
+}
+
+.contact form {
+  margin: 60px 40px 20px 40px;
+}
+
+.contact aside ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }

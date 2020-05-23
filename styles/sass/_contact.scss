@@ -1,0 +1,44 @@
+// ---------CONTACT Page styles---------
+
+// Header styles
+.contact header {
+    background-image: url(../assets/contact-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 73vh;
+        h1 {
+            font-size: 60px;
+            margin-top:130px;
+        }
+}
+
+// Main styles
+
+// Section styles
+.contact main .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom:70px;
+}
+.contact section {
+    width: calc(70% - 40px);
+    background-color:$secondary;
+    box-shadow: -30px 30px $imageBorder;
+    position: relative;
+    top:-120px;
+}
+.contact aside {
+    width: 30%;
+}
+.contact form {
+    margin:60px 40px 20px 40px;
+}
+
+// Aside styles
+.contact aside ul {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+ 
+

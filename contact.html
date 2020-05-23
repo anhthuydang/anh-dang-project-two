@@ -4,11 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <!-- link to Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto&display=swap" rel="stylesheet">
+    <!-- link to Fontawesome -->
+    <script src="https://kit.fontawesome.com/035c9ff2be.js" crossorigin="anonymous"></script>
+    <!-- link to CSS file -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header class="contact">
 
+<body class="contact">
+    <header>
+            <!-- Header starts -->
+    <header>
+        <div class="wrapper">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" class="hamburgerMenu"><i class="fas fa-bars"></i></a>
+                        <ul class="subMenu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <h1>Get In Touch</h1>
+        </div>
     </header>
+    <!-- main starts -->
+    <main>
+        <div class="wrapper">
+            <section>
+                <form action="#">
+                    <div class="namePart">
+                        <div>
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" for="name" id="name" placeholder="Name">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" for="email" id="email" placeholder="Email address">
+                        </div>
+                    </div>
+                    <div class="textArea">
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </section>
+            <aside>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                </ul>
+                <h4>Info@email.com</h4>
+                <p>123-456-7890</p>
+                <p>123 Queen Street West, Unit 10, Toronto, Ontario</p>
+                <p>M5V2D5</p>
+            </aside>
+        </div>
+    </main>
+    <!-- footer starts -->
+    <footer>
+        <div class="wrapper">
+            <p>Copyright <i class="far fa-copyright"></i> 2018 HackerYou</p>
+        </div>
+    </footer>
 </body>
 </html>
