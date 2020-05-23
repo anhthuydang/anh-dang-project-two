@@ -1,10 +1,142 @@
-// .blog {
-//     background-image: url(../assets/blog-header.jpg);
-//     background-size: cover;
-//     height: 70vh;
-// }
+// ---------BLOG styles---------
+// colour variables
+$primary: #EFFDF3;
+$secondary: #FAFAFA;
+$buttonBackground: #4CEEA7;
+$imageBorder: #FDFA69;
+$textColor: #2C2C2C;
 
-// .blog h1 {
-//     font-size: 100px;
-//     color:green;
-// }
+// Header styles
+.blog header {
+    background-image: url(../assets/blog-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+}
+
+.blog h1 {
+    font-size: 90px;
+    text-align: center;
+    margin-top:10%;
+}
+.bigImage {
+    position: relative;
+    right:-5vw;
+    top:-7%;
+    box-shadow: -30px 30px $imageBorder;
+}
+
+// Main styles
+main {
+    background-color:$primary ;
+}
+.blog main .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+section {
+    width: calc(65% - 40px);
+}
+aside {
+    width: 35%;
+    margin-right: 40px;
+}
+.bigContainer {
+    position: relative;
+    top: -7%;
+}
+.blog section .textContainer {
+
+    border: 5px solid $imageBorder;
+    border-right: transparent;
+    margin-left:34px;
+    padding: 40px 0 20px 40px;
+}
+
+// -----Comment part-------
+.comment {
+    margin-left:76px;
+    margin-top:30px;
+}
+.commentContainer {
+    display: flex;
+    margin:50px 0;
+        div:first-child {
+                width: 20%;
+        }
+}
+.textWrapper {
+    width: calc(80% - 30px);
+    margin-left:30px;
+        p:first-child {
+            margin-top:0;
+        }
+}
+
+// Form styles
+.blog form {
+    margin-left:70px;
+        div:first-child {
+            display: flex;
+                div {
+                    flex:1 0 50%;
+                }
+        }
+}
+input[type="text"],
+input[type="email"] {
+    display:block;
+    width: 100%;
+}
+
+
+
+
+
+// Aside styles
+aside .container {
+    background: $secondary;
+    margin-top:90px;
+    padding:20px;
+}
+.sideImage {
+    position: relative;
+    left:-7.5vw;
+    top: -40px;
+    width: 125%;
+}
+
+h4 {
+    @include fontSize(25px);
+}
+.blog span {
+    font-weight: 600;
+    font-style: italic;
+}
+
+aside ul {
+    margin:20px;
+}
+aside li {
+    position: relative;
+        p {
+            margin:0;
+        }
+
+}
+aside li::before {
+    content:'';
+    width: 5px;
+    height: 5px;
+    background-color:$buttonBackground;
+    position: absolute;
+    left:-20px;
+    top:15px;
+    
+}
+
+
+
+
+

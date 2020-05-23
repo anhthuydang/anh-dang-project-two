@@ -3,11 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <!-- link to Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto&display=swap" rel="stylesheet">
+    <!-- link to Fontawesome -->
+    <script src="https://kit.fontawesome.com/035c9ff2be.js" crossorigin="anonymous"></script>
+    <!-- link to CSS -->
     <link rel="stylesheet" href="styles/style.css">
+    <title>Blog</title>
 </head>
-<body>
-    <header class="blog">
+<body class="blog">
+    <!-- Header starts -->
+    <header>
+        <div class="wrapper">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" class="hamburgerMenu"><i class="fas fa-bars"></i></a>
+                        <ul class="subMenu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <h1>Blog</h1>
+        </div>
     </header>
+    <!-- Main starts -->
+    <main>
+        <div class="wrapper">
+            <!-- section -->
+            <section>
+                <div class="bigImage">
+                    <img src="assets/blog-post-image.jpg" alt="A lady sitting on a beautiful flower field and taking picture of the landscape around her.">
+                </div>
+                <div class="bigContainer">
+                    <div class="textContainer">
+                        <h2>Finding Great Locations</h2>
+                        <p>Monday May 4th, 2019 by Dieula</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ducimus, molestias mollitia ex ipsam laborum eius repellat architecto temporibus debitis voluptates beatae modi enim consequuntur alias nisi. Dicta facere sit excepturi dolore cum doloremque dolores, libero quas consequuntur fuga? Quaerat quod deserunt iusto possimus id assumenda similique impedit quibusdam dolorum eius natus, quidem fugit, officiis ab cumque repudiandae. Aspernatur nostrum natus qui quisquam magni id architecto amet quos totam nesciunt impedit aperiam expedita obcaecati optio assumenda doloremque itaque vel, delectus modi. Dolore cumque corporis fuga rerum, quisquam nulla id praesentium reiciendis nisi dolor eaque aspernatur sequi sed non, at earum?</p>
+                    </div>
+                <div class="comment">
+                    <h3>Comments</h3>
+                    <div class="commentContainer">
+                        <div>
+                            <img src="assets/comment-1.jpg" alt="Picture of a man wearing a cap">
+                        </div>
+                        <div class="textWrapper">
+                            <p>Tuesday October 9th, 2018 by Jeremy</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea adipisci quae totam, tempora nisi praesentium perspiciatis maxime quo natus delectus </p>
+                        </div>
+                    </div>
+                    <div class="commentContainer">
+                        <div>
+                            <img src="assets/comment-2.jpg" alt="Picture of a smiling lady">
+                        </div>
+                        <div class="textWrapper">
+                            <p>Wednesday October 10th, 2018 by Julia</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur accusamus nulla, quos autem provident recusandae architecto beatae aliquam cupiditate,</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="#">
+                    <div>
+                        <div>
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" for="name" id="name" placeholder="Name">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" for="email" id="email" placeholder="Email address">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="comment" class="sr-only">Comment</label>
+                        <input type="text" id="comment" for="comment" placeholder="Comment">
+                        <button>Post Comment</button>
+                    </div>
+                </form>
+            </div>
+            </section>
+            <!-- aside -->
+            <aside>
+                <div class="container">
+                    <div class="sideImage">
+                        <img src="assets/side-blog-image.jpg" alt="">
+                    </div>
+                    <div class="textContainer">
+                        <h4>About Captured</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio facere, reiciendis consequatur ducimus quia? <span>Find out more.</span></p>
+                        <h4>Recent Posts</h4>
+                        <ul>
+                            <li>
+                                <p>Lorem ipsum dolor sit.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Lorem ipsum dolor sit.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Lorem ipsum dolor sit.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Lorem ipsum dolor sit.
+                                </p>
+                            </li>
+
+                            
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
 </body>
 </html>

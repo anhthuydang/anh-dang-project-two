@@ -1,9 +1,9 @@
-// colour variables
-$primary: #EFFDF3;
-$secondary: #FAFAFA;
-$buttonBackground: #4CEEA7;
-$imageBorder: #FDFA69;
-$textColor: #2C2C2C;
+// // colour variables
+// $primary: #EFFDF3;
+// $secondary: #FAFAFA;
+// $buttonBackground: #4CEEA7;
+// $imageBorder: #FDFA69;
+// $textColor: #2C2C2C;
 
 
 
@@ -14,20 +14,20 @@ $textColor: #2C2C2C;
     margin: 0 auto;
 }
     // header styles
-.indexHeader {
+.index header {
     background-image: url(../assets/header-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
 }
-.indexHeader .wrapper {
+.index header .wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.indexHeader img {
+.index header img {
     width: 35%;
     border: 30px solid $imageBorder;
     border-right: transparent;
