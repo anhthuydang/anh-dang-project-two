@@ -79,14 +79,33 @@ aside {
     margin-left:70px;
         div:first-child {
             display: flex;
+            margin-bottom:15px;
                 div {
-                    flex:1 0 50%;
+                    flex:1 0 calc(50% - 30px);
                 }
         }
 }
-input[type="text"],
-input[type="email"] {
+
+input,
+textarea {
     display:block;
+    width: 100%;
+    background:transparent;
+    color: $textColor;
+    padding: 10px;
+}
+input {
+    border:none;
+    border-bottom: 1px solid $buttonBackground;
+    margin:0 15px;
+}
+.commentPart textarea {
+    border: 1px solid $buttonBackground;
+    margin:0 15px;
+    resize:none;
+}
+.commentPart button {
+    margin: 30px 15px;
     width: 100%;
 }
 
@@ -110,7 +129,7 @@ aside .container {
 h4 {
     @include fontSize(25px);
 }
-.blog span {
+.blog a {
     font-weight: 600;
     font-style: italic;
 }

@@ -67,7 +67,7 @@
                 </div>
 
                 <form action="#">
-                    <div>
+                    <div class="namePart">
                         <div>
                             <label for="name" class="sr-only">Name</label>
                             <input type="text" for="name" id="name" placeholder="Name">
@@ -77,9 +77,9 @@
                             <input type="email" for="email" id="email" placeholder="Email address">
                         </div>
                     </div>
-                    <div>
+                    <div class="commentPart">
                         <label for="comment" class="sr-only">Comment</label>
-                        <input type="text" id="comment" for="comment" placeholder="Comment">
+                        <textarea name="comment" cols="30" rows="10" placeholder="Comment"></textarea>
                         <button>Post Comment</button>
                     </div>
                 </form>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="textContainer">
                         <h4>About Captured</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio facere, reiciendis consequatur ducimus quia? <span>Find out more.</span></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio facere, reiciendis consequatur ducimus quia? <a href="#">Find out more.</a></p>
                         <h4>Recent Posts</h4>
                         <ul>
                             <li>
@@ -120,6 +120,11 @@
             </aside>
         </div>
     </main>
-
+    <!-- Footer starts -->
+    <footer>
+        <div class="wrapper">
+            <p>Copyright <i class="far fa-copyright"></i> 2018 HackerYou</p>
+        </div>
+    </footer>
 </body>
 </html>
