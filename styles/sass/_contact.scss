@@ -1,6 +1,6 @@
 // ---------CONTACT Page styles---------
 
-// Header styles
+// ---Header styles---
 .contact header {
     background-image: url(../assets/contact-header.jpg);
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
         }
 }
 
-// Main styles
+// ----Main styles----
 
 // Section styles
 .contact main .wrapper {
@@ -25,6 +25,7 @@
     box-shadow: -30px 30px $imageBorder;
     position: relative;
     top:-120px;
+    margin-left: 40px;
 }
 .contact aside {
     width: 30%;
@@ -55,4 +56,50 @@ h4 {
     margin:0;
 }
  
+// -------MEDIA QUERIES---------
+@media (max-width: 940px) {
+    .contact main .wrapper {
+        flex-direction: column;
+    }
+    .contact section,
+    .contact aside {
+        width: 100%;
+    }
+    .contact section {
+        margin:0;
+    }
+    .contact aside {
+        margin-top: 0;
+        padding:0 50px 30px 50px;
+    }
+    .contact aside ul {
+        width: 15%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact header h1 {
+        margin-top: 50px;
+    }
+    .contact form {
+        margin: 30px 30px 20px 20px;
+    }
+    .contact aside ul {
+        width: 30%;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact form .namePart {
+        flex-direction: column;
+    }
+    .contact aside {
+        padding: 0 20px 30px 30px;
+        ul {
+            width: 50%;
+        }
+    }
+}
+
+
 

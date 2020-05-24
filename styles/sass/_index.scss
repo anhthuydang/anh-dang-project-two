@@ -48,12 +48,13 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
+    li {
+        display: flex;
+        flex: 1 0 calc(100% / 4);
+        justify-content: center;
+    }
 }
-.subMenu li {
-    display: flex;
-    flex: 1 0 calc(100% / 4);
-    justify-content: center;
-}
+ 
 nav a {
     @include fontSize(20px);
     line-height: 29px;
@@ -80,11 +81,11 @@ section {
 .firstSection .wrapper {
     display: flex;
     justify-content: center;
-}
-.firstSection .textContainer {
-    text-align: center;
-    width: 70%;
-    margin:15% auto;
+        .textContainer {
+            text-align: center;
+            width: 70%;
+            margin:15% auto;
+    }
 }
 h2 {
     @include fontSize(42px);
@@ -111,11 +112,10 @@ button {
 // Second section styles
 .secondSection {
     background-color: $secondary;
-
-}
-.secondSection .wrapper {
-    display: flex;
-    justify-content: space-between;
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+    }
 }
 .secondSection .flexLeft,
 .secondSection .flexRight {
@@ -140,13 +140,11 @@ h3 {
     top: -30px;
 }
 .secondSection .flexRight div:first-child {
-    box-shadow: -30px 25px $imageBorder;
+    box-shadow: -30px 30px $imageBorder;
     position: relative;
     right: -5vw;
     bottom: -30px;
 }
-
-
 .secondSection .flexRight {
     display: flex;
     flex-direction: column-reverse;
@@ -155,23 +153,23 @@ h3 {
 // Third section styles
 .thirdSection .wrapper {
     padding:80px 0;
-}
-.thirdSection .container {
-    display: flex;
-    padding-top: 50px;
-}
-.thirdSection .textContainer {
-    display: flex;
+        .container {
+            display: flex;
+            padding-top: 50px;
+                .textContainer {
+                    display: flex;
+                }
+    }
 }
 .index .icon {
     background-color: $buttonBackground;
     height: 53px;
     width: 53px;
     border-radius: 50%;
-}
-.icon i {
-    font-size: 23px;
-    padding: 15px;
+        i {
+            font-size: 23px;
+            padding: 15px;
+        }
 }
 
 .thirdSection .textContainer div:nth-of-type(2) {
@@ -179,17 +177,25 @@ h3 {
     padding-left:20px;
     padding-top:5px;
 }
+.thirdSection a {
+    color:$textColor;
+        &:hover,
+        &:focus {
+            color:$buttonBackground;
+        }
+}
+
 
 // Fourth section styles
 .fourthSection .wrapper {
     display: flex;
     padding:80px 0;
-}
-.fourthSection .imageContainer {
-    width: 25%;
-}
-.fourthSection img{
-    box-shadow: 30px 25px $imageBorder;
+        .imageContainer {
+            width: 25%;
+            img {
+                box-shadow: 30px 25px $imageBorder;
+            }
+        }
 }
 .fourthSection .textContainer {
     width: calc(75% - 70px);
@@ -199,15 +205,15 @@ h3 {
 // Last section styles
 .gallery {
     background: $secondary;
+        .wrapper {
+            display: flex;
+            padding: 60px 0;
+                .imageContainer {
+                    flex:1 1 calc(100%/3 - 60px)
+                }
+        }
 }
-.gallery .wrapper {
-    display: flex;
-    padding: 60px 0;
 
-}
-.gallery .imageContainer {
-    flex:1 1 calc(100%/3 - 60px)
-}
 .gallery .imageContainer:nth-child(2) {
     margin:0 30px;
 }
@@ -216,11 +222,12 @@ h3 {
 footer {
     text-align: center;
     background-color: $textColor;
+    p {
+        color: $secondary;
+        margin:0 auto;
+    }
 }
-footer p {
-    color: $secondary;
-    margin:0 auto;
-}
+
 
 // -------MEDIA QUERIES-------
 
@@ -247,9 +254,9 @@ footer p {
 @media (max-width: 675px) {
     .index header {
         height: 80vh;
-    }
-    .index h1 {
-        font-size: 5rem;
+        h1 {
+            font-size: 5rem;
+        }
     }
     .index .container {
         flex-direction: column;
@@ -265,16 +272,49 @@ footer p {
             .textContainer {
                 width: 100%;
                 margin:20px 0;
-
             }
     }
 }
 
-@media (max-width: 500px){
-    nav {
-        display: none;
+@media (max-width: 520px){
+    .hamburgerMenu {
+        display: block;
+        position: absolute;
+        top:5px;
+        left:20px;
     }
-    h1 {
+    .menu > li:active .subMenu,
+    .menu > li:focus .subMenu,
+    .menu > li:focus-within .subMenu {
+        display: block;
+    }
+    nav a:hover,
+    nav a:focus {
+        border-bottom-color: transparent;
+        background-color: $primary;
+
+    }
+    .subMenu {
+        display: none;
+        background-color: rgba($color:$buttonBackground , $alpha: 0.6);
+        height:100vh;
+        position: absolute;
+        top:0;
+        right:0;
+        z-index:100;
+    }
+    .subMenu li {
+        display:flex;
+        padding:10px 20px;
+        border-bottom:1px solid $buttonBackground;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $primary;
+        }
+    }
+    
+    .index h1 {
         font-size:4rem;
     }
     .gallery .wrapper {
@@ -286,17 +326,16 @@ footer p {
                 margin-right:0;
             }
     }
-
 }
 
 @media (max-width: 400px) {
     .index h1 {
         font-size: 3rem;
     }
-    h2 {
+    .index h2 {
         font-size:2rem ;
     }
-    h3 {
+    .index h3 {
         font-size:1.5rem ;
     }
 }

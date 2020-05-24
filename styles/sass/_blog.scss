@@ -7,13 +7,13 @@
     background-size: cover;
     height: 80vh;
     position: relative;
+        h1 {
+            font-size: 90px;
+            text-align: center;
+            margin-top:130px;
+        }
 }
 
-.blog h1 {
-    font-size: 90px;
-    text-align: center;
-    margin-top:130px;
-}
 .bigImage {
     position: relative;
     right:-5vw;
@@ -41,7 +41,6 @@ main {
     top: -7%;
 }
 .blog section .textContainer {
-
     border: 5px solid $imageBorder;
     border-right: transparent;
     margin-left:34px;
@@ -96,14 +95,14 @@ input {
 }
 .textArea {
     margin:15px;
+        button {
+            margin: 30px 0;
+            width: 100%;
+        }
 }
 textarea {
     border: 1px solid $buttonBackground;
     resize:none;
-}
-.textArea button {
-    margin: 30px 0;
-    width: 100%;
 }
 
 // Aside styles
@@ -136,7 +135,6 @@ h4 {
         p {
             margin:0;
         }
-
 }
 .blog aside li::before {
     content:'';
@@ -164,6 +162,10 @@ h4 {
         position:static;
         width: 100%;
     }
+    .comment,
+    .blog form {
+        margin-left:0;
+    }
 }
 @media (max-width: 500px) {
     .blog header {
@@ -177,10 +179,6 @@ h4 {
     }
     .blog h3 {
         font-size: 1.5rem;
-    }
-    .comment,
-    .blog form {
-        margin-left:0;
     }
     input {
         font-size: 15px;
