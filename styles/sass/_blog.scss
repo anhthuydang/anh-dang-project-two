@@ -1,10 +1,4 @@
 // ---------BLOG Page styles---------
-// colour variables
-$primary: #EFFDF3;
-$secondary: #FAFAFA;
-$buttonBackground: #4CEEA7;
-$imageBorder: #FDFA69;
-$textColor: #2C2C2C;
 
 // Header styles
 .blog header {
@@ -18,7 +12,7 @@ $textColor: #2C2C2C;
 .blog h1 {
     font-size: 90px;
     text-align: center;
-    margin-top:10%;
+    margin-top:130px;
 }
 .bigImage {
     position: relative;
@@ -35,10 +29,10 @@ main {
     display: flex;
     flex-direction: row-reverse;
 }
-section {
+.blog section {
     width: calc(65% - 40px);
 }
-aside {
+.blog aside {
     width: 35%;
     margin-right: 40px;
 }
@@ -131,6 +125,7 @@ h4 {
 .blog a {
     font-weight: 600;
     font-style: italic;
+    color: $textColor
 }
 
 .blog aside ul {
@@ -151,9 +146,52 @@ h4 {
     position: absolute;
     left:-20px;
     top:15px;
-    
 }
 
+// -----MEDIA QUERIES------
+@media (max-width: 900px) {
+    .blog header {
+        height: 70vh;
+    }
+    .blog main .wrapper {
+        flex-direction: column;
+    }
+    .blog section,
+    .blog aside {
+        width: 100%;
+    }
+    .sideImage {
+        position:static;
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .blog header {
+        height: 50vh;
+    }
+    .blog h1 {
+        font-size: 4rem;
+    }
+    .blog h2 {
+        font-size: 2rem;
+    }
+    .blog h3 {
+        font-size: 1.5rem;
+    }
+    .comment,
+    .blog form {
+        margin-left:0;
+    }
+    input {
+        font-size: 15px;
+    }
+    .blog aside .container {
+        margin-top:0;
+            p {
+                margin:0;
+            }
+    }
+}
 
 
 

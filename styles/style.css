@@ -564,6 +564,91 @@ footer p {
   margin: 0 auto;
 }
 
+@media (max-width: 930px) {
+  nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu {
+    width: 80%;
+  }
+  .index h1 {
+    font-size: 6rem;
+  }
+  .secondSection .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .secondSection .flexLeft,
+  .secondSection .flexRight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 675px) {
+  .index header {
+    height: 80vh;
+  }
+  .index h1 {
+    font-size: 5rem;
+  }
+  .index .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .firstSection .textContainer,
+  .fourthSection .imageContainer {
+    width: 90%;
+  }
+  .fourthSection .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 0;
+  }
+  .fourthSection .wrapper .imageContainer,
+  .fourthSection .wrapper .textContainer {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    display: none;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  .gallery .wrapper {
+    padding: 40px 0;
+  }
+  .gallery .wrapper .imageContainer:nth-child(3) {
+    display: none;
+  }
+  .gallery .wrapper .imageContainer:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .index h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
 .blog header {
   background-image: url(../assets/blog-header.jpg);
   background-repeat: no-repeat;
@@ -575,7 +660,7 @@ footer p {
 .blog h1 {
   font-size: 90px;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 130px;
 }
 
 .bigImage {
@@ -600,11 +685,11 @@ main {
           flex-direction: row-reverse;
 }
 
-section {
+.blog section {
   width: calc(65% - 40px);
 }
 
-aside {
+.blog aside {
   width: 35%;
   margin-right: 40px;
 }
@@ -719,6 +804,7 @@ h4 {
 .blog a {
   font-weight: 600;
   font-style: italic;
+  color: #2C2C2C;
 }
 
 .blog aside ul {
@@ -743,6 +829,54 @@ h4 {
   top: 15px;
 }
 
+@media (max-width: 900px) {
+  .blog header {
+    height: 70vh;
+  }
+  .blog main .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog section,
+  .blog aside {
+    width: 100%;
+  }
+  .sideImage {
+    position: static;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .blog header {
+    height: 50vh;
+  }
+  .blog h1 {
+    font-size: 4rem;
+  }
+  .blog h2 {
+    font-size: 2rem;
+  }
+  .blog h3 {
+    font-size: 1.5rem;
+  }
+  .comment,
+  .blog form {
+    margin-left: 0;
+  }
+  input {
+    font-size: 15px;
+  }
+  .blog aside .container {
+    margin-top: 0;
+  }
+  .blog aside .container p {
+    margin: 0;
+  }
+}
+
 .contact header {
   background-image: url(../assets/contact-header.jpg);
   background-repeat: no-repeat;
@@ -763,7 +897,6 @@ h4 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  margin-bottom: 70px;
 }
 
 .contact section {
@@ -777,6 +910,7 @@ h4 {
 
 .contact aside {
   width: 30%;
+  margin-top: 100px;
 }
 
 .contact form {
@@ -791,4 +925,22 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+h4 {
+  padding: 30px 0;
+}
+
+.contact aside a {
+  color: #2C2C2C;
+}
+
+.contact i:hover,
+.contact i:focus {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.contact aside p {
+  margin: 0;
 }
