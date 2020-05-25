@@ -352,7 +352,8 @@ nav a {
   transition: 200ms ease-in;
 }
 
-nav a:hover, nav a:focus {
+.subMenu a:hover,
+.subMenu a:focus {
   border-bottom-color: #4CEEA7;
 }
 
@@ -643,8 +644,8 @@ footer p {
   .menu > li:focus-within .subMenu {
     display: block;
   }
-  nav a:hover,
-  nav a:focus {
+  .subMenu a:hover,
+  .subMenu a:focus {
     border-bottom-color: transparent;
     background-color: #EFFDF3;
   }

@@ -60,10 +60,10 @@ nav a {
     line-height: 29px;
     border-bottom: 2px solid transparent;
     transition:200ms ease-in;
-        &:hover,
-        &:focus {
-            border-bottom-color: $buttonBackground;
-        }
+}
+.subMenu a:hover,
+.subMenu a:focus {
+    border-bottom-color: $buttonBackground;
 }
 h1 {
     @include fontSize(130px);
@@ -288,8 +288,8 @@ footer {
     .menu > li:focus-within .subMenu {
         display: block;
     }
-    nav a:hover,
-    nav a:focus {
+    .subMenu a:hover,
+    .subMenu a:focus {
         border-bottom-color: transparent;
         background-color: $primary;
 
