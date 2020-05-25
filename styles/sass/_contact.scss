@@ -47,11 +47,14 @@ h4 {
 .contact aside a {
     color: $textColor;
 }
-.contact i:hover,
-.contact i:focus {
-    transform: scale(1.5);
-
+.contact aside i {
+    font-size: 2rem;
+     &:hover,
+     &:focus {
+         transform: scale(1.5);
+     }
 }
+
 .contact aside p {
     margin:0;
 }

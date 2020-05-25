@@ -253,6 +253,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 90%;
@@ -582,7 +586,7 @@ footer p {
     width: 80%;
   }
   .index h1 {
-    font-size: 6rem;
+    font-size: 9rem;
   }
   .secondSection .wrapper {
     -webkit-box-orient: vertical;
@@ -600,14 +604,14 @@ footer p {
   .index header {
     height: 80vh;
   }
-  .index header h1 {
-    font-size: 5rem;
-  }
   .index .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .index h1 {
+    font-size: 7rem;
   }
   .firstSection .textContainer,
   .fourthSection .imageContainer {
@@ -664,7 +668,7 @@ footer p {
     background-color: #EFFDF3;
   }
   .index h1 {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   .gallery .wrapper {
     padding: 40px 0;
@@ -679,13 +683,13 @@ footer p {
 
 @media (max-width: 400px) {
   .index h1 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   .index h2 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .index h3 {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -799,6 +803,7 @@ textarea {
   background: transparent;
   color: #2C2C2C;
   padding: 10px;
+  font-size: 1.5rem;
 }
 
 input {
@@ -897,14 +902,11 @@ h4 {
   .blog header {
     height: 50vh;
   }
-  .blog h1 {
-    font-size: 4rem;
-  }
   .blog h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .blog h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   input {
     font-size: 15px;
@@ -976,8 +978,11 @@ h4 {
   color: #2C2C2C;
 }
 
-.contact i:hover,
-.contact i:focus {
+.contact aside i {
+  font-size: 2rem;
+}
+
+.contact aside i:hover, .contact aside i:focus {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }

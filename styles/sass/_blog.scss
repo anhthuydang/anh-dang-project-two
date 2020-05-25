@@ -88,6 +88,7 @@ textarea {
     background:transparent;
     color: $textColor;
     padding: 10px;
+    font-size: 1.5rem;
 }
 input {
     border:none;
@@ -171,14 +172,11 @@ h4 {
     .blog header {
         height: 50vh;
     }
-    .blog h1 {
-        font-size: 4rem;
-    }
     .blog h2 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     .blog h3 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
     input {
         font-size: 15px;
