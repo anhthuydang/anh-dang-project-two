@@ -417,6 +417,14 @@ button {
   border-style: none;
   padding: 5px 10px;
   border-radius: 2px;
+  border: 2px solid transparent;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+button:hover, button:focus {
+  background: transparent;
+  border-color: #4CEEA7;
 }
 
 .secondSection {
